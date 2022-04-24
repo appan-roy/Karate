@@ -1,0 +1,15 @@
+Feature: GET Call With Background
+
+	Background: This is test pre-requisites
+		When url 'https://reqres.in'
+		Then header Accept = 'application/json'
+
+  Scenario: GET With Background
+    Given path '/api/users?page=2'
+    When method GET
+    Then status 200
+    And print response
+    And print responseStatus
+    And print responseTime
+    And print responseHeaders
+    And print responseCookies

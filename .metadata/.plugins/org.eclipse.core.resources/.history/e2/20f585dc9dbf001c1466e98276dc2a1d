@@ -1,0 +1,11 @@
+Feature: GET Call - GoREST
+  This is to test GET call in GoREST
+
+  # GET Call
+  Scenario: GET Call - GoREST
+    Given header Authorization = 'Bearer '+goRestAuthToken
+    When url baseUrl+'/public/v1/users'
+    And path '30'
+    When method GET
+    Then status 200
+    And print response

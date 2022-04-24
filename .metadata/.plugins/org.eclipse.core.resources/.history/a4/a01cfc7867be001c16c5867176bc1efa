@@ -1,0 +1,15 @@
+package tests;
+
+import org.junit.runner.RunWith;
+import com.intuit.karate.junit5.Karate;
+import com.intuit.karate.junit5.Karate.Test;
+
+@RunWith(Karate.class)
+public class TestRunnerJUnit5 {
+
+	@Test
+	Karate testConfigDemo() {
+		return Karate.run()
+	}
+	
+}

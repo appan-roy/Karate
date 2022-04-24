@@ -1,0 +1,13 @@
+package tests;
+
+import org.junit.runner.RunWith;
+
+@RunWith(Karate.class)
+public class TestRunnerJUnit5 {
+
+	@Karate.test
+	Karate testConfigDemo() {
+		return Karate.run()
+	}
+	
+}

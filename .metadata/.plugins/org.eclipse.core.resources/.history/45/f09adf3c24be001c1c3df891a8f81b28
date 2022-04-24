@@ -1,0 +1,67 @@
+Feature: My First Karate Test PUT Call
+  This is my first karate test PUT call
+
+  Background: This is test pre-requisites
+    When url 'https://reqres.in'
+    Then header Accept = 'application/json'
+
+  # PUT Call
+  Scenario: PUT Call 1
+    Given url 'https://reqres.in/api/users/2'
+    And request {"name": "morpheus", "job": "zion resident"}
+    When method PUT
+    Then status 200
+    And print response
+
+  # PUT Call with Background
+  Scenario: PUT Call 2
+    Given path '/api/users/2'
+    And request {"name": "morpheus", "job": "zion resident"}
+    When method PUT
+    Then status 200
+    And print response
+
+  # PUT Call with assertions
+  Scenario: PUT Call 3
+    Given path '/api/users/2'
+    And request {"name": "morpheus", "job": "zion resident"}
+    When method PUT
+    Then status 200
+    And match response == {"name": "morpheus", "job": "zion resident", "id": "#string", "createdAt": "#ignore"}
+    And match $ == {"name": "morpheus", "job": "zion resident", "id": "#string", "createdAt": "#ignore"}
+    And print response
+
+  # PUT Call with req body and res body from file
+  Scenario: PUT Call 4
+    Given path '/api/users/2'
+    And def projectPath = karate.properties['user.dir']
+    And print projectPath
+    And def reqFilePath = projectPath + '/jsonFiles/reqres/PUT/Request.json'
+    And print reqFilePath
+    And def requestBody = reqFilePath
+    And request requestBody
+    When method PUT
+    Then status 200
+    And def resFilePath = projectPath + '/jsonFiles/reqres/PUT/Response.json'
+    And print resFilePath
+    And def responseBody = resFilePath
+    And match $ == responseBody
+    And print response
+
+  # PUT Call with change req body data from feature step
+  Scenario: PUT Call 5
+    Given path '/api/users/2'
+    And def projectPath = karate.properties['user.dir']
+    And print projectPath
+    And def reqFilePath = projectPath + '/jsonFiles/reqres/PUT/Request.json'
+    And print reqFilePath
+    And def requestBody = reqFilePath
+    And request requestBody
+    And set requestBody.job = 'engineer'
+    When method PUT
+    Then status 200
+    And def resFilePath = projectPath + '/jsonFiles/reqres/PUT/Response.json'
+    And print resFilePath
+    And def responseBody = resFilePath
+    And match $ == responseBody
+    And print response

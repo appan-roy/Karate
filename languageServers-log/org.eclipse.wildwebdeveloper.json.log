@@ -1,0 +1,37 @@
+
+LSP4E to org.eclipse.wildwebdeveloper.json:Content-Length: 740
+
+
+LSP4E to org.eclipse.wildwebdeveloper.json:{"jsonrpc":"2.0","id":"1","method":"initialize","params":{"processId":5980,"rootPath":"/E:/Softwares/My PC Apps/Karate/Workspace/KarateDSL/","rootUri":"file:///E:/Softwares/My%20PC%20Apps/Karate/Workspace/KarateDSL/","capabilities":{"workspace":{"applyEdit":true,"symbol":{},"executeCommand":{"dynamicRegistration":true},"workspaceFolders":true},"textDocument":{"synchronization":{"willSave":true,"willSaveWaitUntil":true,"didSave":true},"completion":{"completionItem":{"snippetSupport":true}},"hover":{},"signatureHelp":{},"references":{},"documentHighlight":{},"documentSymbol":{},"formatting":{},"rangeFormatting":{},"definition":{},"codeAction":{},"codeLens":{},"documentLink":{},"rename":{}}},"clientName":"Eclipse IDE","trace":"off"}}
+org.eclipse.wildwebdeveloper.json to LSP4E:{"jsonrpc":"2.0","id":"1","result":{"capabilities":{"textDocumentSync":1,"completionProvider":{"resolveProvider":true,"triggerCharacters":["\"",":"]},"hoverProvider":true,"documentSymbolProvider":true,"documentRangeFormattingProvider":true,"colorProvider":{},"foldingRangeProvider":true}}}
+LSP4E to org.eclipse.wildwebdeveloper.json:Content-Length: 52
+
+
+LSP4E to org.eclipse.wildwebdeveloper.json:{"jsonrpc":"2.0","method":"initialized","params":{}}
+LSP4E to org.eclipse.wildwebdeveloper.json:Content-Length: 565
+
+
+LSP4E to org.eclipse.wildwebdeveloper.json:{"jsonrpc":"2.0","method":"json/schemaAssociations","params":{"/bower.json":["http://json.schemastore.org/bower"],"/tsconfig.*.json":["http://json.schemastore.org/tsconfig"],"/.bowerrc":["http://json.schemastore.org/bowerrc"],"/jsconfig.json":["http://json.schemastore.org/jsconfig"],"package.json":["http://json.schemastore.org/package"],"/typing.json":["http://json.schemastore.org/typing"],"/.bower.json":["http://json.schemastore.org/bower"],"/tsconfig.json":["http://json.schemastore.org/tsconfig"],"/omnisharp.json":["http://json.schemastore.org/omnisharp"]}}
+LSP4E to org.eclipse.wildwebdeveloper.json:Content-Length: 60
+
+
+LSP4E to org.eclipse.wildwebdeveloper.json:{"jsonrpc":"2.0","id":"2","method":"shutdown","params":null}
+org.eclipse.wildwebdeveloper.json to LSP4E:{"jsonrpc":"2.0","id":"2","result":null}
+LSP4E to org.eclipse.wildwebdeveloper.json:Content-Length: 740
+
+
+LSP4E to org.eclipse.wildwebdeveloper.json:{"jsonrpc":"2.0","id":"1","method":"initialize","params":{"processId":6880,"rootPath":"/E:/Softwares/My PC Apps/Karate/Workspace/KarateDSL/","rootUri":"file:///E:/Softwares/My%20PC%20Apps/Karate/Workspace/KarateDSL/","capabilities":{"workspace":{"applyEdit":true,"symbol":{},"executeCommand":{"dynamicRegistration":true},"workspaceFolders":true},"textDocument":{"synchronization":{"willSave":true,"willSaveWaitUntil":true,"didSave":true},"completion":{"completionItem":{"snippetSupport":true}},"hover":{},"signatureHelp":{},"references":{},"documentHighlight":{},"documentSymbol":{},"formatting":{},"rangeFormatting":{},"definition":{},"codeAction":{},"codeLens":{},"documentLink":{},"rename":{}}},"clientName":"Eclipse IDE","trace":"off"}}
+org.eclipse.wildwebdeveloper.json to LSP4E:{"jsonrpc":"2.0","id":"1","result":{"capabilities":{"textDocumentSync":1,"completionProvider":{"resolveProvider":true,"triggerCharacters":["\"",":"]},"hoverProvider":true,"documentSymbolProvider":true,"documentRangeFormattingProvider":true,"colorProvider":{},"foldingRangeProvider":true}}}
+LSP4E to org.eclipse.wildwebdeveloper.json:Content-Length: 52
+
+
+LSP4E to org.eclipse.wildwebdeveloper.json:{"jsonrpc":"2.0","method":"initialized","params":{}}
+LSP4E to org.eclipse.wildwebdeveloper.json:Content-Length: 565
+
+
+LSP4E to org.eclipse.wildwebdeveloper.json:{"jsonrpc":"2.0","method":"json/schemaAssociations","params":{"/bower.json":["http://json.schemastore.org/bower"],"/tsconfig.*.json":["http://json.schemastore.org/tsconfig"],"/.bowerrc":["http://json.schemastore.org/bowerrc"],"/jsconfig.json":["http://json.schemastore.org/jsconfig"],"package.json":["http://json.schemastore.org/package"],"/typing.json":["http://json.schemastore.org/typing"],"/.bower.json":["http://json.schemastore.org/bower"],"/tsconfig.json":["http://json.schemastore.org/tsconfig"],"/omnisharp.json":["http://json.schemastore.org/omnisharp"]}}
+LSP4E to org.eclipse.wildwebdeveloper.json:Content-Length: 60
+
+
+LSP4E to org.eclipse.wildwebdeveloper.json:{"jsonrpc":"2.0","id":"2","method":"shutdown","params":null}
+org.eclipse.wildwebdeveloper.json to LSP4E:{"jsonrpc":"2.0","id":"2","result":null}

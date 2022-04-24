@@ -1,0 +1,22 @@
+Feature: POST Call - GoREST
+  This is to test POST call in GoREST
+
+Background:
+* url baseUrl
+* def reqPayload =
+"""
+{
+"name": "tom",
+"email": "tom20@rhyta.com",
+"gender": "male",
+"status": "active"
+}
+"""
+
+  Scenario: Create a user with given data
+    Given header Authorization = 'Bearer '+goRestAuthToken
+    When url baseUrl+'/public/v1/users'
+    And path '30'
+    When method GET
+    Then status 200
+    And print response

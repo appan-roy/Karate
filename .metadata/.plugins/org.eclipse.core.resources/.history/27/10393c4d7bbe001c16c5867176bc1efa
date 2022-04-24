@@ -1,0 +1,19 @@
+Feature: Test Parameterization
+  This is to test GET calls with path and query params
+
+  # GET Call with path param
+  Scenario: GET Call - Path Param
+    Given url baseUrl+'/public/v2/users'
+    And path '/30'
+    When method GET
+    Then status 200
+    And print response
+
+    # GET Call with single query param
+  Scenario: GET Call - Query Param 1
+  * def query = {status: 'active'}
+    Given url baseUrl+'/public/v2/users'
+    And path '/30'
+    When method GET
+    Then status 200
+    And print response

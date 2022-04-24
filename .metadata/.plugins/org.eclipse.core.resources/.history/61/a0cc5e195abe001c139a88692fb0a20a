@@ -1,0 +1,22 @@
+package runner;
+
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+
+import com.intuit.karate.junit4.Karate;
+
+import cucumber.api.CucumberOptions;
+
+@RunWith(Karate.class)
+@CucumberOptions(
+		features = "./features/",
+		tags = ""
+		)
+public class TestRunner {
+
+	@BeforeClass
+	public static void before() {
+		System.setProperty("karate.env", "qa");
+	}
+	
+}

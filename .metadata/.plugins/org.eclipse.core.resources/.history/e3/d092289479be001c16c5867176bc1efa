@@ -1,0 +1,10 @@
+Feature: Test Parameterization
+  This is to test GET calls with path and query params
+
+  # GET Call with path params
+  Scenario: GET Call - Path Params
+    Given path '/api/users'
+    And param page = 2
+    When method GET
+    Then status 200
+    And print response

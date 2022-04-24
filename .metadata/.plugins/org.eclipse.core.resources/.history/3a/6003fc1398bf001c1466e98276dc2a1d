@@ -1,0 +1,10 @@
+Feature: Pass request headers
+  This is to test GET calls with request headers
+
+  # GET Call with request headers 1
+  Scenario: GET Call - Pass request headers 1
+    Given url baseUrl+'/public/v1/users'
+    And path '/30'
+    When method GET
+    Then status 200
+    And print response

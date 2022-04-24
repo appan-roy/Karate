@@ -1,0 +1,7 @@
+function fn(){
+	var config = {
+		name: "Appan"
+	};
+	
+	return config;
+}

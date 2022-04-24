@@ -1,0 +1,49 @@
+Feature: My First Karate Test POST Call
+  This is my first karate test POST call
+
+  Background: This is test pre-requisites
+    When url 'https://reqres.in'
+    Then header Accept = 'application/json'
+    And def expectedOutput = read('/jsonFiles/reqres/POST/Response.json')
+
+  # POST Call
+  Scenario: POST Call 1
+    Given url 'https://reqres.in/api/users'
+    And request {"name": "morpheus", "job": "leader"}
+    When method POST
+    Then status 201
+    And print response
+
+  # POST Call with Background
+  Scenario: POST Call 2
+    Given path '/api/users'
+    And request {"name": "morpheus", "job": "leader"}
+    When method POST
+    Then status 201
+    And print response
+
+  # POST Call with assertions
+  Scenario: POST Call 3
+    Given path '/api/users'
+    And request {"name": "morpheus", "job": "leader"}
+    When method POST
+    Then status 201
+    And match response == {"name": "morpheus", "job": "leader", "id": "#string", "createdAt": "#ignore"}
+    And match $ == {"name": "morpheus", "job": "leader", "id": "#string", "createdAt": "#ignore"}
+    And print response
+
+  # POST Call with req body and res body from file
+  Scenario: POST Call 4
+    Given path '/api/users'
+    And def projectPath = karate.properties['user.dir']
+    And print projectPath
+    And def reqFilePath = projectPath + '/jsonFiles/reqres/POST/Request.json'
+    And print reqFilePath
+    And def requestBody = reqFilePath
+    And request requestBody
+    When method POST
+    Then status 201
+    #And def resFilePath = projectPath + '/jsonFiles/reqres/POST/Response.json'
+    #And def expectedOutput = resFilePath
+    And match $ == expectedOutput
+    And print response

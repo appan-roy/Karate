@@ -1,0 +1,13 @@
+function fn(){
+	
+	var config = {
+		name: "Appan"
+	};
+	
+	
+	karate.configure('connectTimeout', 5000);
+	
+	
+	return config;
+	
+}

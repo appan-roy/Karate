@@ -1,0 +1,24 @@
+function fn() {
+
+	var config = {
+		env: 'qa'
+		baseURL: ''
+	};
+
+	env = karate.env
+	karate.log('The value of env is: ', env)
+
+	if (env == 'qa') {
+		config.baseURL = 'https://reqres.in'
+	} else if (env == 'dev') {
+		config.baseURL = 'https://reqres.in'
+	} else if (env == 'uat') {
+		config.baseURL = 'https://reqres.in'
+	}
+
+	karate.configure('connectTimeout', 5000);
+	karate.configure('readTimeout', 5000);
+
+	return config;
+
+}

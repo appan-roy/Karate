@@ -1,0 +1,18 @@
+package tests;
+
+import com.intuit.karate.junit5.Karate;
+import com.intuit.karate.junit5.Karate.Test;
+
+public class TestRunnerJUnit5 {
+
+	@Test
+	Karate testFeatures() {
+		return Karate.run("DELETE").relativeTo(getClass());
+	}
+	
+	@Test
+	Karate testTags() {
+		return Karate.run("GET").tags("smoke").relativeTo(getClass());
+	}
+	
+}
